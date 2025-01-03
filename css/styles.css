@@ -1,0 +1,1220 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to top, #ff9a9e, #fad0c4);
+  color: #333;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+/* Audio Section Styling */
+audio {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #222;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #ff69b4; /* Pink color */
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: #ff69b4; /* Pink color */
+}
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #ff6f61;
+}
+audio {
+  display: block;
+  width: 80%;
+  max-width: 600px;
+  margin: 30px auto;
+  border: 5px solid #ff4d4d;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #ffe6e6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+audio:hover {
+  border-color: #ff1a1a;
+}
+
+.heart-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.heart-container::before {
+  content: "❤️";
+  font-size: 50px;
+  color: #ff4d4d;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.heart-container::after {
+  content: "❤️";
+  font-size: 50px;
+  color: #ff4d4d;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+header, section {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+header h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+header .header-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  background-color: #ff6f61;
+  color: white;
+  font-size: 1.2em;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+  margin-right: 10px;
+  outline: none;
+  display: inline-block;
+}
+
+.header-buttons button::before,
+.header-buttons button::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff6f61;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.header-buttons button::before {
+  top: -10px;
+  left: 10px;
+}
+
+.header-buttons button::after {
+  top: -10px;
+  right: 10px;
+}
+
+
+
+/* Heart Shape Effect */
+.header-buttons button:hover {
+  background-color: #ff3b2d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.header-buttons button:hover::before,
+.header-buttons button:hover::after {
+  transform: translateY(-10px);
+}
+
+.header-buttons button:active {
+  background-color: #e02e1e;
+  transform: scale(1);
+}
+
+.header-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.5);
+}
+
+/* Dark Mode Styles for Heart-shaped Buttons */
+body.dark-mode .header-buttons button {
+  background-color: #444;
+  border: 1px solid #ff6f61;
+}
+
+body.dark-mode .header-buttons button::before,
+body.dark-mode .header-buttons button::after {
+  background-color: #444;
+}
+
+body.dark-mode .header-buttons button:hover {
+  background-color: #555;
+}
+
+body.dark-mode .header-buttons button:active {
+  background-color: #666;
+}
+
+body.dark-mode .header-buttons button:focus {
+  box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.5);
+}
+
+header .dark-mode-toggle, header .love-letter-toggle {
+  padding: 10px 15px;
+  border: none;
+  background: #ff6f61;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+header .dark-mode-toggle:hover, header .love-letter-toggle:hover {
+  background: #ff3b2d;
+}
+
+#love-letter {
+  display: flex;
+  text-align: left;
+  margin-top: 30px;
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+#love-letter h2 {
+  font-size: 2em;
+  color: #ff6f61;
+}
+
+#love-letter p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+#about, #moments, #countdown {
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, background-color 0.5s ease;
+}
+
+#moments .gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.gallery img, .gallery video {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover, .gallery video:hover {
+  transform: scale(1.05);
+}
+
+#timer {
+  font-size: 1.5em;
+  color: #ff6f61;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background: #ff6f61;
+  font-size: 1.2em;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #333;
+}
+
+body.dark-mode header h1 {
+  color: #ff6f61;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode header p {
+  color: #ccc;
+}
+
+body.dark-mode header .dark-mode-toggle,
+body.dark-mode header .love-letter-toggle {
+  background: #444;
+  border: 1px solid #ff6f61;
+}
+
+body.dark-mode header .dark-mode-toggle:hover,
+body.dark-mode header .love-letter-toggle:hover {
+  background: #555;
+}
+
+body.dark-mode #about, body.dark-mode #moments, body.dark-mode #countdown {
+  background: rgba(34, 34, 34, 0.9);
+  color: #e0e0e0;
+}
+
+body.dark-mode #about h2, body.dark-mode #moments h2, body.dark-mode #countdown h2 {
+  color: #ff6f61;
+}
+
+body.dark-mode footer {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-mode .gallery img, body.dark-mode .gallery video {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Love Letter Section in Dark Mode */
+body.dark-mode #love-letter {
+  display: block;
+  text-align: left;
+  margin-top: 30px;
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(28, 28, 28, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  color: #e0e0e0;
+  transition: transform 0.3s ease-in-out;
+}
+
+body.dark-mode #love-letter h2 {
+  font-size: 2em;
+  color: #ff6f61;
+}
+
+body.dark-mode #love-letter p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Love Letter Button in Dark Mode */
+body.dark-mode .love-letter-toggle {
+  background: #444;
+  border: 1px solid #ff6f61;
+}
+
+body.dark-mode .love-letter-toggle:hover {
+  background: #555;
+}
+
+/* Floating Hearts */
+.heart-container .heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.5));
+  clip-path: polygon(50% 0%, 100% 35%, 82% 100%, 50% 80%, 18% 100%, 0% 35%);
+  animation: floatHeart 8s ease-in-out infinite, fadeHeart 8s linear infinite, wobble 3s infinite ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+@keyframes floatHeart {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100vh); }
+}
+
+@keyframes fadeHeart {
+  0%, 80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(0); }
+  50% { transform: rotate(15deg); }
+}
+
+/* Shayari Section */
+.shayari {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+/* Shayari Button Styling */
+.shayari-toggle {
+  background-color: #ff6f61;
+  color: white;
+  font-size: 1.2em;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Hover Effect */
+.shayari-toggle:hover {
+  background-color: #ff3b2d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+/* Active Effect */
+.shayari-toggle:active {
+  background-color: #e02e1e;
+  transform: scale(1);
+}
+
+/* Dark Mode for Shayari Button */
+body.dark-mode .shayari-toggle {
+  background-color: #444;
+  border: 1px solid #ff6f61;
+}
+
+body.dark-mode .shayari-toggle:hover {
+  background-color: #555;
+}
+
+body.dark-mode .shayari-toggle:active {
+  background-color: #666;
+}
+
+.shayari h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #ff6f61;
+  font-size: 2.5em;
+}
+
+.shayari p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+}
+
+#next-shayari {
+  background-color: #ff6f61;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+#next-shayari:hover {
+  background-color: #ff3b2d;
+}
+
+/* Dark Mode for Shayari */
+body.dark-mode .shayari {
+  background-color: rgba(34, 34, 34, 0.9);
+  color: #e0e0e0;
+}
+
+body.dark-mode .shayari h2 {
+  color: #ff6f61;
+}
+
+body.dark-mode .shayari p {
+  color: #ccc;
+}
+
+body.dark-mode #next-shayari {
+  background-color: #444;
+  border: 1px solid #ff6f61;
+}
+
+body.dark-mode #next-shayari:hover {
+  background-color: #555;
+}
+/* Moments Section */
+#moments {
+  background-color: #fff5f5;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+#moments h2 {
+  font-size: 2.5em;
+  color: #e4007f;
+  margin-bottom: 20px;
+}
+
+#moments p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Gallery Styling */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+/* Gallery Headings (h3) */
+.gallery h3 {
+  font-size: 2em; /* Increase font size */
+  color: #ff0066; /* Make the color more vibrant */
+  font-weight: bold; /* Make the text bold */
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase; /* Add uppercase text for emphasis */
+  letter-spacing: 2px; /* Add spacing between letters for better readability */
+}
+
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery video::after {
+  content: "My Queen";
+  font-size: 1.5em;
+  color: #e4007f;
+  font-family: 'Dancing Script', cursive;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to top, #ff9a9e, #fad0c4);
+  color: #333;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+/* Audio Section Styling */
+audio {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #222;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #ff69b4; /* Pink color */
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: #ff69b4; /* Pink color */
+}
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #ff6f61;
+}
+
+header, section {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+header h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+header .header-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  background-color: #ff6f61;
+  color: white;
+  font-size: 1.2em;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+  margin-right: 10px;
+  outline: none;
+  display: inline-block;
+}
+
+.header-buttons button::before,
+.header-buttons button::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff6f61;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.header-buttons button::before {
+  top: -10px;
+  left: 10px;
+}
+
+.header-buttons button::after {
+  top: -10px;
+  right: 10px;
+}
+
+/* Heart Shape Effect */
+.header-buttons button:hover {
+  background-color: #ff3b2d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.header-buttons button:hover::before,
+.header-buttons button:hover::after {
+  transform: translateY(-10px);
+}
+
+.header-buttons button:active {
+  background-color: #e02e1e;
+  transform: scale(1);
+}
+
+.header-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.5);
+}
+
+/* Dark Mode Styles for Heart-shaped Buttons */
+body.dark-mode .header-buttons button {
+  background-color: #444;
+  border: 1px solid #ff6f61;
+}
+
+body.dark-mode .header-buttons button::before,
+body.dark-mode .header-buttons button::after {
+  background-color: #444;
+}
+
+body.dark-mode .header-buttons button:hover {
+  background-color: #555;
+}
+
+body.dark-mode .header-buttons button:active {
+  background-color: #666;
+}
+
+body.dark-mode .header-buttons button:focus {
+  box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.5);
+}
+
+header .dark-mode-toggle, header .love-letter-toggle {
+  padding: 10px 15px;
+  border: none;
+  background: #ff6f61;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+header .dark-mode-toggle:hover, header .love-letter-toggle:hover {
+  background: #ff3b2d;
+}
+
+#love-letter {
+  display: none;
+  text-align: left;
+  margin-top: 30px;
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+#love-letter h2 {
+  font-size: 2em;
+  color: #ff6f61;
+}
+
+#love-letter p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+#about, #moments, #countdown {
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, background-color 0.5s ease;
+}
+
+#moments .gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.gallery img, .gallery video {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover, .gallery video:hover {
+  transform: scale(1.05);
+}
+
+#timer {
+  font-size: 1.5em;
+  color: #ff6f61;
+}
+
+footer {
+  background-color: #ffe6e6;
+  text-align: center;
+  padding: 30px;
+  border: 5px solid #ff4d4d;
+  border-radius: 15px;
+  position: relative;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+}
+
+footer img {
+  border-radius: 15px;
+  border: 5px solid #ff4d4d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+footer img:hover {
+  transform: scale(1.05);
+}
+
+footer::before {
+  content: "❤️";
+  font-size: 40px;
+  color: #ff4d4d;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer::after {
+  content: "❤️";
+  font-size: 40px;
+  color: #ff4d4d;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.love-letter {
+  font-family: 'Georgia', serif;
+  text-align: center;
+  background-color: #fef8e6;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.letter-border {
+  padding: 20px;
+  border: 5px solid #f39c9c; /* Soft pink border */
+  border-image: linear-gradient(to right, #f39c9c, #ffa6a6, #f39c9c);
+  border-image-slice: 1;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #fff5f5, #ffe6e6);
+}
+
+h2 {
+  color: #d9534f;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #333;
+}
+
+body.dark-mode header h1 {
+  color: #ff6f61;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode header p {
+  color: #ccc;
+}
+
+body.dark-mode header .dark-mode-toggle,
+body.dark-mode header .love-letter-toggle {
+  background: #444;
+  border: 1px solid #ff6f61;
+}
+
+body.dark-mode header .dark-mode-toggle:hover,
+body.dark-mode header .love-letter-toggle:hover {
+  background: #555;
+}
+
+body.dark-mode #about, body.dark-mode #moments, body.dark-mode #countdown {
+  background: rgba(34, 34, 34, 0.9);
+  color: #e0e0e0;
+}
+
+body.dark-mode #about h2, body.dark-mode #moments h2, body.dark-mode #countdown h2 {
+  color: #ff6f61;
+}
+
+body.dark-mode footer {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-mode .gallery img, body.dark-mode .gallery video {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Love Letter Section in Dark Mode */
+body.dark-mode #love-letter {
+  display: block;
+  text-align: left;
+  margin-top: 30px;
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(28, 28, 28, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  color: #e0e0e0;
+  transition: transform 0.3s ease-in-out;
+}
+
+body.dark-mode #love-letter h2 {
+  font-size: 2em;
+  color: #ff6f61;
+}
+
+body.dark-mode #love-letter p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Love Letter Button in Dark Mode */
+body.dark-mode .love-letter-toggle {
+  background: #444;
+  border: 1px solid #ff6f61;
+}
+
+body.dark-mode .love-letter-toggle:hover {
+  background: #555;
+}
+
+/* Floating Hearts */
+.heart-container .heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.5));
+  clip-path: polygon(50% 0%, 100% 35%, 82% 100%, 50% 80%, 18% 100%, 0% 35%);
+  animation: floatHeart 8s ease-in-out infinite, fadeHeart 8s linear infinite, wobble 3s infinite ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+@keyframes floatHeart {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100vh); }
+}
+
+@keyframes fadeHeart {
+  0%, 80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(0); }
+  50% { transform: rotate(15deg); }
+}
+
+/* Shayari Section */
+.shayari {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+/* Shayari Button Styling */
+.shayari-toggle {
+  background-color: #ff6f61;
+  color: white;
+  font-size: 1.2em;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Hover Effect */
+.shayari-toggle:hover {
+  background-color: #ff3b2d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+/* Active Effect */
+.shayari-toggle:active {
+  background-color: #e02e1e;
+  transform: scale(1);
+}
+
+/* Dark Mode for Shayari Button */
+body.dark-mode .shayari-toggle {
+  background-color: #444;
+  border: 1px solid #ff6f61;
+}
+
+body.dark-mode .shayari-toggle:hover {
+  background-color: #555;
+}
+
+body.dark-mode .shayari-toggle:active {
+  background-color: #666;
+}
+
+.shayari h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #ff6f61;
+  font-size: 2.5em;
+}
+
+.shayari p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+}
+
+#next-shayari {
+  background-color: #ff6f61;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+#next-shayari:hover {
+  background-color: #ff3b2d;
+}
+
+/* Dark Mode for Shayari */
+body.dark-mode .shayari {
+  background-color: rgba(34, 34, 34, 0.9);
+  color: #e0e0e0;
+}
+
+body.dark-mode .shayari h2 {
+  color: #ff6f61;
+}
+
+body.dark-mode .shayari p {
+  color: #ccc;
+}
+
+body.dark-mode #next-shayari {
+  background-color: #444;
+  border: 1px solid #ff6f61;
+}
+
+body.dark-mode #next-shayari:hover {
+  background-color: #555;
+}
+/* Moments Section */
+#moments {
+  background-color: #fff5f5;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+#moments h2 {
+  font-size: 2.5em;
+  color: #e4007f;
+  margin-bottom: 20px;
+}
+
+#moments p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+#moments {
+  font-family: Arial, sans-serif;
+  background-color: #fef2f2;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  border: 5px solid #ff4d4d;
+  position: relative;
+}
+
+#moments h2 {
+  font-size: 36px;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+}
+
+#moments p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.gallery h3 {
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 2px solid #ff4d4d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 2px solid #ff4d4d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#moments::before {
+  content: "❤️";
+  font-size: 50px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#moments::after {
+  content: "❤️";
+  font-size: 50px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gallery h3:last-of-type {
+  font-size: 30px;
+  color: #ff4d4d;
+  font-style: italic;
+}
+
+
+/* Gallery Styling */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+/* Gallery Headings (h3) */
+.gallery h3 {
+  font-size: 2em; /* Increase font size */
+  color: #ff0066; /* Make the color more vibrant */
+  font-weight: bold; /* Make the text bold */
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase; /* Add uppercase text for emphasis */
+  letter-spacing: 2px; /* Add spacing between letters for better readability */
+}
+
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery video::after {
+  content: "My Queen";
+  font-size: 1.5em;
+  color: #e4007f;
+  font-family: 'Dancing Script', cursive;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #moments {
+    padding: 20px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr; /* Stack images and video on smaller screens */
+  }
+
+  .gallery img, .gallery video {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
